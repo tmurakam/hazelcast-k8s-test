@@ -26,6 +26,8 @@ spec:
               value: "-Dhazelcast.config=/data/hazelcast/hazelcast.yaml"
             - name: LOGGING_LEVEL
               value: INFO
+              #value: DEBUG
+              #value: TRACE
           volumeMounts:
             - name: hazelcast-cm
               mountPath: /data/hazelcast
