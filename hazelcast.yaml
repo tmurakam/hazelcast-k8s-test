@@ -35,3 +35,20 @@ spec:
         - name: hazelcast-cm
           configMap:
             name: hazelcast-cm
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: hazelcast-cm
+data:
+  hazelcast.yaml: |
+    hazelcast:
+      network:
+        join:
+          multicast:
+            enabled: false
+          kubernetes:
+            enabled: true
+        rest-api:
+          enabled: true
